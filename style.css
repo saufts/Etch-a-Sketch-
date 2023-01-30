@@ -1,0 +1,29 @@
+.container {
+
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.rows {
+
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.columns {
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    text-align: center;
+    align-items: center;;
+    background-color: blue;
+    justify-content: center;
+    border-radius: 5px;
+    border: 2px;
+    border-color: red;
+    border-style: solid;
+
+}
