@@ -1,7 +1,6 @@
 const container = document.querySelector('.container');
 
-createGrid(64);
-
+createGrid(128);
 
 function createGrid(gridCount) {
 
@@ -11,18 +10,24 @@ function createGrid(gridCount) {
     
         rows.classList.add(`rows`);
         container.appendChild(rows);
+        //container.style.backgroundColor = 'purple';
         
         for (let j = 0; j < gridCount; j++) {
-    
-            columns = document.createElement('div');
-            columns.classList.add('columns');
-            rows.appendChild(columns);
-            columns.textContent = j + 1;
-            columns = document.querySelector('.columns');
-            //document.columns.style.backgroundColor = 'black';
-            //columns.addEventListener('mouseover', () => {document.columns.style.background = 'red';});
-        }
-        
+
+            let columns = [];
+            columns[j] = document.createElement('div');
+            columns[j].classList.add(`columns`);
+            rows.appendChild(columns[j]);
+            columns[j].textContent = j + 1;
+            columns[j] = document.querySelector('.columns');
+            
+        }       
     }
+    
+    document.querySelectorAll('.columns').forEach(column => {
+        column.addEventListener('mouseover', () => {
+            column.style.background = 'red';
+        });
+    });
 }
 
