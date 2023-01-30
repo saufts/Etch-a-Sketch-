@@ -3,12 +3,20 @@ const container = document.querySelector('.container');
 let rows = [];
 
 changeGridSizeButton = document.querySelector('button');
+
 changeGridSizeButton.addEventListener('click', () => {
 
     if(isGridCreated) deleteGrid();
+
     gridSize = prompt('Enter grid size');
-    createGrid(gridSize);
-})
+
+    if(gridSize < 150) {
+        createGrid(gridSize);   
+    }
+    else {
+        alert('Enter value between 1 and 150'); 
+    }
+});
 
 let isGridCreated = false;
 
@@ -28,7 +36,7 @@ function createGrid(gridCount) {
             columns[j] = document.createElement('div');
             columns[j].classList.add(`columns`);
             rows[i].appendChild(columns[j]);
-            //columns[j].textContent = j + 1;  
+
         }       
     }
     
