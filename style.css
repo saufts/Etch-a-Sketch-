@@ -14,16 +14,16 @@
 }
 
 .columns {
-    min-width: 40px;
-    min-height: 40px;
+    min-width: 10px;
+    min-height: 10px;
     display: flex;
     text-align: center;
-    align-items: center;;
+    align-items: center;
     background-color: blue;
     justify-content: center;
-    border-radius: 5px;
-    border: 2px;
-    border-color: red;
+    border-radius: 1px;
+    border: 1px;
+    border-color: black;
     border-style: solid;
 
 }

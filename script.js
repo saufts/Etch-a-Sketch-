@@ -1,6 +1,6 @@
 const container = document.querySelector('.container');
 
-createGrid(128);
+createGrid(144);
 
 function createGrid(gridCount) {
 
@@ -10,7 +10,6 @@ function createGrid(gridCount) {
     
         rows.classList.add(`rows`);
         container.appendChild(rows);
-        //container.style.backgroundColor = 'purple';
         
         for (let j = 0; j < gridCount; j++) {
 
@@ -18,9 +17,7 @@ function createGrid(gridCount) {
             columns[j] = document.createElement('div');
             columns[j].classList.add(`columns`);
             rows.appendChild(columns[j]);
-            columns[j].textContent = j + 1;
-            columns[j] = document.querySelector('.columns');
-            
+            //columns[j].textContent = j + 1;  
         }       
     }
     
