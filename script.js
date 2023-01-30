@@ -4,11 +4,9 @@ let rows = [];
 
 changeGridSizeButton = document.querySelector('button');
 changeGridSizeButton.addEventListener('click', () => {
+
     if(isGridCreated) deleteGrid();
-    
     gridSize = prompt('Enter grid size');
-
-
     createGrid(gridSize);
 })
 
@@ -49,3 +47,4 @@ function deleteGrid() {
         rows[i].parentNode.removeChild(rows[i]);
     }       
 } 
+
